@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@plugin "daisyui" { themes: false; }
+@plugin "daisyui/theme" {
+  name: "mobiletools";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: oklch(98% 0.008 165);
+  --color-base-200: oklch(95.5% 0.012 165);
+  --color-base-300: oklch(90% 0.018 165);
+  --color-base-content: oklch(27% 0.025 175);
+  --color-primary: oklch(49% 0.09 170);
+  --color-primary-content: oklch(98% 0.008 165);
+  --color-secondary: oklch(72% 0.085 200);
+  --color-secondary-content: oklch(24% 0.035 200);
+  --color-accent: oklch(74% 0.12 85);
+  --color-accent-content: oklch(26% 0.04 70);
+  --color-neutral: oklch(25% 0.025 178);
+  --color-neutral-content: oklch(95% 0.012 165);
+  --color-info: oklch(72% 0.1 230);
+  --color-info-content: oklch(23% 0.045 230);
+  --color-success: oklch(67% 0.12 155);
+  --color-success-content: oklch(20% 0.04 155);
+  --color-warning: oklch(80% 0.13 82);
+  --color-warning-content: oklch(27% 0.055 72);
+  --color-error: oklch(64% 0.17 25);
+  --color-error-content: oklch(98% 0.01 25);
+  --radius-selector: 0.75rem;
+  --radius-field: 0.75rem;
+  --radius-box: 1.25rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.28125rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@font-face {
+  font-family: "LINE Seed JP";
+  src: url("@fontsource/line-seed-jp/files/line-seed-jp-japanese-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LINE Seed JP";
+  src: url("@fontsource/line-seed-jp/files/line-seed-jp-japanese-700-normal.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root { font-family: "LINE Seed JP", system-ui, sans-serif; background: var(--color-base-100); color: var(--color-base-content); }
+body { min-width: 320px; min-height: 100dvh; margin: 0; }
+button, input, select { font-family: inherit; }
+.numeric { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+.form-control { display: flex; flex-direction: column; }
+@media (max-width: 639px) { .card-body { padding: 1.25rem; } }
